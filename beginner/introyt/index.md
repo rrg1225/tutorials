@@ -48,14 +48,14 @@ Introduction ||
 sphx_glr_beginner_introyt_autogradyt_tutorial.py
 
 Introduction ||
-![](../../_images/sphx_glr_tensors_deeper_tutorial_thumb.png)
-
-sphx_glr_beginner_introyt_tensors_deeper_tutorial.py
-
-Introduction ||
 ![](../../_images/sphx_glr_captumyt_thumb.png)
 
 sphx_glr_beginner_introyt_captumyt.py
+
+Introduction ||
+![](../../_images/sphx_glr_tensors_deeper_tutorial_thumb.png)
+
+sphx_glr_beginner_introyt_tensors_deeper_tutorial.py
 
 Introduction ||
 ![](../../_images/sphx_glr_introyt1_tutorial_thumb.png)

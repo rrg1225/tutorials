@@ -111,10 +111,10 @@ with torch.no_grad():
 ```
 
 ```
-eager: 0.3475568542480469
+eager: 0.3492515869140625
 /usr/local/lib/python3.10/dist-packages/torch/_inductor/compile_fx.py:320: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
  warnings.warn(
-compile: 52.0300859375
+compile: 52.5827109375
 ```
 
 Notice that `torch.compile` takes a lot longer to complete
@@ -157,29 +157,29 @@ print("~" * 10)
 ```
 
 ```
-eager eval time 0: 0.018059295654296877
-eager eval time 1: 0.017118207931518553
-eager eval time 2: 0.016529407501220703
-eager eval time 3: 0.016450559616088867
-eager eval time 4: 0.017633279800415038
-eager eval time 5: 0.016501760482788085
-eager eval time 6: 0.016542720794677734
-eager eval time 7: 0.016519136428833008
-eager eval time 8: 0.0164833927154541
-eager eval time 9: 0.016457727432250976
+eager eval time 0: 0.01936582374572754
+eager eval time 1: 0.01741004753112793
+eager eval time 2: 0.016963584899902344
+eager eval time 3: 0.016951391220092774
+eager eval time 4: 0.01695552062988281
+eager eval time 5: 0.016983039855957033
+eager eval time 6: 0.0167956485748291
+eager eval time 7: 0.016937984466552734
+eager eval time 8: 0.016755712509155272
+eager eval time 9: 0.016828447341918944
 ~~~~~~~~~~
-compile eval time 0: 0.08498483276367187
-compile eval time 1: 0.008865792274475098
-compile eval time 2: 0.00929792022705078
-compile eval time 3: 0.00832102394104004
-compile eval time 4: 0.008247296333312988
-compile eval time 5: 0.00819814395904541
-compile eval time 6: 0.008168448448181152
-compile eval time 7: 0.008195072174072266
-compile eval time 8: 0.008264703750610352
-compile eval time 9: 0.008293375968933106
+compile eval time 0: 0.08642047882080078
+compile eval time 1: 0.008836095809936523
+compile eval time 2: 0.009210880279541016
+compile eval time 3: 0.00831488037109375
+compile eval time 4: 0.008195072174072266
+compile eval time 5: 0.008184831619262695
+compile eval time 6: 0.008147968292236327
+compile eval time 7: 0.008141823768615723
+compile eval time 8: 0.008135680198669434
+compile eval time 9: 0.008117216110229492
 ~~~~~~~~~~
-(eval) eager median: 0.016524271965026857, compile median: 0.008279039859771728, speedup: 1.9959164643377463x
+(eval) eager median: 0.016953455924987794, compile median: 0.00818995189666748, speedup: 2.0700311966284213x
 ~~~~~~~~~~
 ```
 
@@ -247,29 +247,29 @@ print("~" * 10)
 ```
 
 ```
-eager train time 0: 0.3410380859375
-eager train time 1: 0.0518205451965332
-eager train time 2: 0.04894617462158203
-eager train time 3: 0.04911404800415039
-eager train time 4: 0.048909313201904295
-eager train time 5: 0.049751041412353515
-eager train time 6: 0.049173503875732424
-eager train time 7: 0.048570369720458986
-eager train time 8: 0.04853657531738281
-eager train time 9: 0.049259521484375
+eager train time 0: 0.3451617431640625
+eager train time 1: 0.05151846313476562
+eager train time 2: 0.049522689819335934
+eager train time 3: 0.04931174468994141
+eager train time 4: 0.05045772933959961
+eager train time 5: 0.049667072296142575
+eager train time 6: 0.049385440826416015
+eager train time 7: 0.04906905746459961
+eager train time 8: 0.04924313735961914
+eager train time 9: 0.04906918334960937
 ~~~~~~~~~~
-compile train time 0: 157.976046875
-compile train time 1: 2.581234619140625
-compile train time 2: 0.023931903839111326
-compile train time 3: 0.021179391860961915
-compile train time 4: 0.020361215591430663
-compile train time 5: 0.020351999282836913
-compile train time 6: 0.020361215591430663
-compile train time 7: 0.020348928451538087
-compile train time 8: 0.020348928451538087
-compile train time 9: 0.020338687896728515
+compile train time 0: 159.63575
+compile train time 1: 2.58577099609375
+compile train time 2: 0.023029760360717775
+compile train time 3: 0.020806655883789063
+compile train time 4: 0.020185087203979494
+compile train time 5: 0.02024038314819336
+compile train time 6: 0.02025164794921875
+compile train time 7: 0.020168703079223634
+compile train time 8: 0.020163583755493163
+compile train time 9: 0.020161535263061522
 ~~~~~~~~~~
-(train) eager median: 0.0491437759399414, compile median: 0.020361215591430663, speedup: 2.4135973473324612x
+(train) eager median: 0.049454065322875974, compile median: 0.020246015548706055, speedup: 2.4426566898510873x
 ~~~~~~~~~~
 ```
 
@@ -296,7 +296,7 @@ To troubleshoot issues and to gain a deeper understanding of how to apply `torch
 
 We hope that you will give `torch.compile` a try!
 
-**Total running time of the script:** (3 minutes 35.807 seconds)
+**Total running time of the script:** (3 minutes 38.041 seconds)
 
 [`Download Jupyter notebook: torch_compile_full_example.ipynb`](../_downloads/cf1148cb3c2260353d407c20256391cd/torch_compile_full_example.ipynb)
 

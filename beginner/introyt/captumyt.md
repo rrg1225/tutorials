@@ -78,33 +78,23 @@ offers enhanced tools specific to its attributions:
 - The `captum.attr.visualization` module (imported below as `viz`)
 provides helpful functions for visualizing attributions related to
 images.
-- **Captum Insights** is an easy-to-use API on top of Captum that
-provides a visualization widget with ready-made visualizations for
-image, text, and arbitrary model types.
 
-Both of these visualization toolsets will be demonstrated in this
-notebook. The first few examples will focus on computer vision use
-cases, but the Captum Insights section at the end will demonstrate
-visualization of attributions in a multi-model, visual
-question-and-answer model.
+This visualization toolset will be demonstrated throughout this notebook.
 
 ## Installation
 
 Before you get started, you need to have a Python environment with:
 
-- Python version 3.6 or higher
-- For the Captum Insights example, Flask 1.1 or higher and Flask-Compress
-(the latest version is recommended)
-- PyTorch version 1.2 or higher (the latest version is recommended)
-- TorchVision version 0.6 or higher (the latest version is recommended)
+- Python version 3.9 or higher
+- PyTorch (the latest version is recommended)
+- TorchVision (the latest version is recommended)
 - Captum (the latest version is recommended)
-- Matplotlib version 3.3.4, since Captum currently uses a Matplotlib
-function whose arguments have been renamed in later versions
+- Matplotlib (the latest version is recommended)
 
 To install Captum in a virtual environment, use:
 
 ```
-pip install torch torchvision captum matplotlib==3.3.4 Flask-Compress
+pip install torch torchvision captum matplotlib
 ```
 
 Restart this notebook in the environment you set up, and you're ready to
@@ -236,56 +226,6 @@ image.
 
 Visualizations such as this can give you novel insights into how your
 hidden layers respond to your input.
-
-## Visualization with Captum Insights
-
-Captum Insights is an interpretability visualization widget built on top
-of Captum to facilitate model understanding. Captum Insights works
-across images, text, and other features to help users understand feature
-attribution. It allows you to visualize attribution for multiple
-input/output pairs, and provides visualization tools for image, text,
-and arbitrary data.
-
-In this section of the notebook, we'll visualize multiple image
-classification inferences with Captum Insights.
-
-First, let's gather some image and see what the model thinks of them.
-For variety, we'll take our cat, a teapot, and a trilobite fossil:
-
-...and it looks like our model is identifying them all correctly - but of
-course, we want to dig deeper. For that we'll use the Captum Insights
-widget, which we configure with an `AttributionVisualizer` object,
-imported below. The `AttributionVisualizer` expects batches of data,
-so we'll bring in Captum's `Batch` helper class. And we'll be looking
-at images specifically, so well also import `ImageFeature`.
-
-We configure the `AttributionVisualizer` with the following arguments:
-
-- An array of models to be examined (in our case, just the one)
-- A scoring function, which allows Captum Insights to pull out the
-top-k predictions from a model
-- An ordered, human-readable list of classes our model is trained on
-- A list of features to look for - in our case, an `ImageFeature`
-- A dataset, which is an iterable object returning batches of inputs
-and labels - just like you'd use for training
-
-```
-# Baseline is all-zeros input - this may differ depending on your data
-
-# merging our image transforms from above
-```
-
-Note that running the cell above didn't take much time at all, unlike
-our attributions above. That's because Captum Insights lets you
-configure different attribution algorithms in a visual widget, after
-which it will compute and display the attributions. *That* process will
-take a few minutes.
-
-Running the cell below will render the Captum Insights widget. You can
-then choose attributions methods and their arguments, filter model
-responses based on predicted class or prediction correctness, see the
-model's predictions with associated probabilities, and view heatmaps of
-the attribution compared with the original image.
 
 ```
 # %%%%%%RUNNABLE_CODE_REMOVED%%%%%%
