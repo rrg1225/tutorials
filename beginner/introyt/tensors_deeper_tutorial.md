@@ -283,10 +283,10 @@ For example:
 For arithmetic operations, there are functions that behave similarly:
 
 Note that these in-place arithmetic functions are methods on the
-`torch.Tensor` object, not attached to the `torch` module like many
-other functions (e.g., `torch.sin()`). As you can see from
-`a.add_(b)`, *the calling tensor is the one that gets changed in
-place.*
+`torch.Tensor` object. As you can see from `a.add_(b)`, *the calling
+tensor is the one that gets changed in place.* Similarly, the in-place
+trigonometric functions like `sin_()` are also tensor methods rather than
+module-level functions.
 
 There is another option for placing the result of a computation in an
 existing, allocated tensor. Many of the methods and functions we've seen

@@ -12,8 +12,8 @@
 | [Writing Custom Datasets, DataLoaders and Transforms](data_loading_tutorial.html#sphx-glr-beginner-data-loading-tutorial-py) (`data_loading_tutorial.py`) | 00:00.002 | 0.0 |
 | [Distributed training at scale with PyTorch and Ray Train](distributed_training_with_ray_tutorial.html#sphx-glr-beginner-distributed-training-with-ray-tutorial-py) (`distributed_training_with_ray_tutorial.py`) | 00:00.002 | 0.0 |
 | [Understanding requires_grad, retain_grad, Leaf, and Non-leaf Tensors](understanding_leaf_vs_nonleaf_tutorial.html#sphx-glr-beginner-understanding-leaf-vs-nonleaf-tutorial-py) (`understanding_leaf_vs_nonleaf_tutorial.py`) | 00:00.002 | 0.0 |
-| [What is torch.nn really?](nn_tutorial.html#sphx-glr-beginner-nn-tutorial-py) (`nn_tutorial.py`) | 00:00.002 | 0.0 |
 | [Serve PyTorch models at scale with Ray Serve](serving_tutorial.html#sphx-glr-beginner-serving-tutorial-py) (`serving_tutorial.py`) | 00:00.002 | 0.0 |
+| [What is torch.nn really?](nn_tutorial.html#sphx-glr-beginner-nn-tutorial-py) (`nn_tutorial.py`) | 00:00.002 | 0.0 |
 | [Hyperparameter tuning using Ray Tune](hyperparameter_tuning_tutorial.html#sphx-glr-beginner-hyperparameter-tuning-tutorial-py) (`hyperparameter_tuning_tutorial.py`) | 00:00.002 | 0.0 |
 | [Template Tutorial](template_tutorial.html#sphx-glr-beginner-template-tutorial-py) (`template_tutorial.py`) | 00:00.002 | 0.0 |
 | [Mosaic: Memory Profiling for PyTorch](mosaic_memory_profiling_tutorial.html#sphx-glr-beginner-mosaic-memory-profiling-tutorial-py) (`mosaic_memory_profiling_tutorial.py`) | 00:00.000 | 0.0 |

@@ -2831,23 +2831,23 @@ correct.</p>
 <span class="nb">print</span><span class="p">(</span><span class="nb">input</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([[ 0.8778,  3.5037,  3.6881, 12.1057, 13.6793],
-        [ 8.3355,  7.5277,  5.7449, 14.0630,  6.3473],
-        [ 9.1078,  1.5053,  2.8518,  5.3092,  4.3564],
-        [11.5273,  7.6528,  7.9112, 12.8105,  5.6351],
-        [ 3.4206, 15.7877,  1.8953,  8.0560,  7.6364],
-        [11.5273, 15.6405,  8.1725,  2.2063,  5.6351],
-        [ 9.1078,  2.9987,  4.0511, 11.1352,  4.3564],
-        [ 8.3355,  6.1495,  4.8764,  9.3851,  6.3473]],
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([[ 7.1262,  5.8068, 10.1196,  3.1994,  4.4171],
+        [ 6.1408,  9.0309, 14.1317,  4.6806, 24.6198],
+        [ 4.9550,  0.6775,  2.5726, 11.1803, 17.1432],
+        [10.0571,  8.4734, 15.7181, 15.7210,  2.4323],
+        [ 9.6191,  5.3263,  6.9789,  4.8247,  0.6235],
+        [10.0571,  6.2653,  9.5569,  1.2185,  2.4323],
+        [ 4.9550,  7.5294,  0.6823,  2.8336, 17.1432],
+        [ 6.1408,  1.0714,  4.8062,  9.8884, 24.6198]],
        grad_fn=&lt;BadFFTFunctionBackward&gt;)
-tensor([[-1.6106,  0.2960, -1.1336, -0.1932, -2.0050, -0.8271, -0.7257, -0.8882],
-        [-1.1362,  1.4656, -1.3838,  0.4920, -0.2089, -0.2183,  1.5368, -0.5271],
-        [ 1.3449, -0.4061, -1.3012,  1.3802, -0.4809,  0.8400,  0.2374, -0.6321],
-        [-1.0756,  0.2150, -0.1369, -0.1000, -0.4685, -0.3936,  1.0247, -1.4963],
-        [-1.1787,  0.1819, -0.6559,  2.2211,  0.5912,  0.4701,  0.2287, -0.3566],
-        [ 1.9663, -0.9906,  0.0879, -1.2485, -0.7832, -0.0876,  0.1427,  2.1529],
-        [-0.3659, -0.1679,  1.8884,  1.0332,  0.1840,  0.9517, -1.4206,  0.3511],
-        [ 0.9235,  1.1178, -2.0766,  0.6327, -0.8027, -0.3638,  1.5156,  1.4961]],
+tensor([[ 0.2981, -0.9180,  1.0887,  0.9429, -0.7364,  0.0206,  0.4117,  0.1531],
+        [ 0.3790,  0.1262, -0.1842, -0.8687,  1.5035, -0.9648,  0.0732,  0.9664],
+        [-1.3868,  0.9499, -0.3284,  1.0688,  0.4877, -1.5322,  1.4423, -1.2157],
+        [-0.0087,  1.0468, -0.2953,  0.2596, -1.0999,  1.1581, -1.6687,  0.5902],
+        [-0.3993,  2.7223, -2.3470, -0.7070,  0.4587,  1.7032, -2.2865,  2.0817],
+        [ 0.0508,  0.5409, -0.3327,  0.4894, -1.6847, -1.2469, -1.4493,  0.1756],
+        [ 2.9609,  0.3420,  0.5210, -0.9017,  2.4427,  0.9684,  0.6103, -0.5437],
+        [ 1.6497, -1.6989, -0.4911, -0.2109,  0.8204, -0.4431,  0.8545,  0.7171]],
        requires_grad=True)
 </pre></div>
 </div>
@@ -2912,39 +2912,39 @@ has a filter (kernel) that represents weights.</p>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Filter and bias:  [Parameter containing:
-tensor([[-0.1827,  0.4993, -0.1844],
-        [ 0.2996,  0.1427,  1.7259],
-        [-0.4290, -0.1642,  0.3413]], requires_grad=True), Parameter containing:
-tensor([[-1.4711]], requires_grad=True)]
-Output from the convolution:  tensor([[-4.4601,  0.0272, -4.7531, -3.3066, -0.8798, -3.8595, -3.8842, -0.7476],
-        [-1.3771,  1.9459, -1.6547, -1.8924,  0.1740, -4.3422,  0.9539, -4.0301],
-        [-0.6228, -2.8745, -3.4537, -3.5422, -1.1866, -0.4177, -1.4226, -2.9234],
-        [-4.2202,  0.3303, -3.7334, -0.8393, -2.1919, -2.1046,  0.3036, -4.5827],
-        [-3.9174, -3.0093, -2.3159, -0.0155, -4.3488, -0.6254, -1.6805, -2.1052],
-        [-2.2853, -4.0109, -2.0926, -2.9317, -4.3792, -2.1464, -4.2363, -2.9448],
-        [-2.0740, -2.1193, -2.6911,  1.4574, -1.1215, -0.4816,  1.7072, -1.8141],
-        [ 1.2033, -2.8568, -1.8822, -2.2315, -3.8975, -6.9767,  0.0362, -0.3519]],
+tensor([[-0.9220, -1.9648, -1.1928],
+        [-0.8511, -0.9363, -0.1717],
+        [ 1.9871,  0.7806,  0.9926]], requires_grad=True), Parameter containing:
+tensor([[0.4478]], requires_grad=True)]
+Output from the convolution:  tensor([[ 1.4524,  4.1022, -0.5481,  2.3474, -0.9490,  1.2432,  5.6856,  7.0171],
+        [-2.6289, -4.2239, -3.0481, -5.4708, -0.4143, -3.2688,  0.9216,  3.0340],
+        [ 0.4413, -3.0372, -7.4714,  5.2076,  6.9427,  4.6424, -0.7446, -1.6155],
+        [ 7.8159,  7.6030,  2.3901,  0.0110,  1.6502, -1.1802, -2.2701, -1.7154],
+        [ 0.0942,  6.7015,  0.0750,  0.8374,  5.1041,  3.9594,  7.3748,  3.3851],
+        [-6.0563, -3.3505,  2.2362,  4.6187,  7.0127,  3.1547, -2.7627,  1.9812],
+        [ 3.8745,  6.6219,  3.9081,  2.0309, -5.7916, -8.8383, -0.6795,  1.6734],
+        [ 1.5021,  6.6834, -2.1561, -2.7850, -3.7271, -1.9502, -1.2649, -2.0963]],
        grad_fn=&lt;ScipyConv2dFunctionBackward&gt;)
-Gradient for the input map:  tensor([[-0.0549,  0.4355, -0.6409, -0.1572, -0.0858,  0.2388,  0.1794, -0.7489,
-          0.1886,  0.0419],
-        [ 0.2121, -0.9544,  0.7913, -3.6587, -1.6641, -0.3476, -0.7689, -0.4395,
-         -2.8353, -0.3846],
-        [-0.3572,  0.8411, -0.3262,  1.7988, -1.9550,  0.4235,  1.8212, -2.3506,
-         -1.2652,  0.0535],
-        [ 0.0393,  0.7305, -0.0835,  1.5406, -0.6733,  1.0101,  1.7939,  0.2314,
-         -2.4808, -1.8750],
-        [ 0.4038, -0.5585,  3.0725, -1.6545, -2.0938, -5.2832,  0.6203, -0.0072,
-          1.4343, -0.8228],
-        [-0.4643,  0.0746,  2.3304,  4.5617,  3.6136,  0.2768,  0.6449,  1.6010,
-          1.2845,  1.6973],
-        [-0.3721, -0.7075, -4.0620,  1.3988, -1.8513,  0.4283,  0.6069,  0.7676,
-         -1.6908,  3.0061],
-        [ 0.0401,  0.5447, -0.0734, -2.8119,  0.0626, -1.3970,  2.3800,  2.0322,
-          1.4477, -0.7838],
-        [ 0.7304,  1.5156,  5.1256,  2.9123,  2.4866,  0.8322, -0.4200,  2.3762,
-          0.5758, -1.6012],
-        [-1.0706, -1.0636,  0.0231, -0.0878,  0.2913, -0.1862, -0.1887,  0.7078,
-          0.1410, -0.2614]])
+Gradient for the input map:  tensor([[ 0.6252,  0.2822, -1.2214, -0.0896,  2.7734,  1.8837, -0.6003, -1.2801,
+         -0.8610, -0.5846],
+        [ 0.7902, -0.1907,  0.5051,  4.3802,  3.4373, -0.6854,  0.3940,  1.3632,
+          0.1256,  0.2900],
+        [-1.8069, -0.7578, -2.7960, -2.2698, -6.6382, -4.8239, -3.7556, -1.3462,
+         -2.6985, -0.9737],
+        [-2.0273, -2.6917, -6.7432, -6.3354, -6.2976, -7.6700, -1.4033, -3.5956,
+         -2.3692, -0.8122],
+        [-1.2698, -1.1976,  1.0421,  0.5485,  0.3568,  1.9781,  3.2939,  1.6334,
+          0.6680,  1.8875],
+        [ 0.2595, -1.6246,  4.2133,  2.1766,  2.7330,  1.1745,  1.8901, -1.5758,
+         -0.0438,  0.1057],
+        [ 3.4173,  0.3101,  1.4136, -2.4073, -4.2957, -2.7172,  1.1397, -0.6129,
+          2.4722,  0.4081],
+        [-0.1272, -1.1772, -1.6386,  0.6108, -3.4690, -1.6663, -3.0028, -4.0788,
+         -2.8726, -0.1026],
+        [ 0.4951, -0.0493,  2.5226,  4.6889,  3.6614,  3.4015, -0.7038, -4.0705,
+         -1.5007, -0.8919],
+        [ 0.3920, -0.1100, -0.5906, -1.1826,  0.6565, -1.4903,  5.7900,  2.1853,
+          3.1670,  0.3613]])
 </pre></div>
 </div>
 <p><strong>Check the gradients:</strong></p>
@@ -2960,7 +2960,7 @@ Gradient for the input map:  tensor([[-0.0549,  0.4355, -0.6409, -0.1572, -0.085
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Are the gradients correct:  True
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.601 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.605 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-advanced-numpy-extensions-tutorial-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/52d4aaa33601a2b3990ace6aa45546ce/numpy_extensions_tutorial.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">numpy_extensions_tutorial.ipynb</span></code></a></p>
@@ -3179,7 +3179,7 @@ Gradient for the input map:  tensor([[-0.0549,  0.4355, -0.6409, -0.1572, -0.085
        "headline": "Creating Extensions Using NumPy and SciPy",
        "description": "PyTorch Documentation. Explore PyTorch, an open-source machine learning library that accelerates the path from research prototyping to production deployment.",
        "url": "/advanced/numpy_extensions_tutorial.html",
-       "articleBody": "Note Go to the end to download the full example code. Creating Extensions Using NumPy and SciPy# Author: Adam Paszke Updated by: Adam Dziedzic In this tutorial, we shall go through two tasks: Create a neural network layer with no parameters. This calls into numpy as part of its implementation Create a neural network layer that has learnable weights This calls into SciPy as part of its implementation import torch from torch.autograd import Function Parameter-less example# This layer doesn\u2019t particularly do anything useful or mathematically correct. It is aptly named BadFFTFunction Layer Implementation from numpy.fft import rfft2, irfft2 class BadFFTFunction(Function): @staticmethod def forward(ctx, input): numpy_input = input.detach().numpy() result = abs(rfft2(numpy_input)) return input.new(result) @staticmethod def backward(ctx, grad_output): numpy_go = grad_output.numpy() result = irfft2(numpy_go) return grad_output.new(result) # since this layer does not have any parameters, we can # simply declare this as a function, rather than as an ``nn.Module`` class def incorrect_fft(input): return BadFFTFunction.apply(input) Example usage of the created layer: input = torch.randn(8, 8, requires_grad=True) result = incorrect_fft(input) print(result) result.backward(torch.randn(result.size())) print(input) tensor([[ 0.8778, 3.5037, 3.6881, 12.1057, 13.6793], [ 8.3355, 7.5277, 5.7449, 14.0630, 6.3473], [ 9.1078, 1.5053, 2.8518, 5.3092, 4.3564], [11.5273, 7.6528, 7.9112, 12.8105, 5.6351], [ 3.4206, 15.7877, 1.8953, 8.0560, 7.6364], [11.5273, 15.6405, 8.1725, 2.2063, 5.6351], [ 9.1078, 2.9987, 4.0511, 11.1352, 4.3564], [ 8.3355, 6.1495, 4.8764, 9.3851, 6.3473]], grad_fn=\u003cBadFFTFunctionBackward\u003e) tensor([[-1.6106, 0.2960, -1.1336, -0.1932, -2.0050, -0.8271, -0.7257, -0.8882], [-1.1362, 1.4656, -1.3838, 0.4920, -0.2089, -0.2183, 1.5368, -0.5271], [ 1.3449, -0.4061, -1.3012, 1.3802, -0.4809, 0.8400, 0.2374, -0.6321], [-1.0756, 0.2150, -0.1369, -0.1000, -0.4685, -0.3936, 1.0247, -1.4963], [-1.1787, 0.1819, -0.6559, 2.2211, 0.5912, 0.4701, 0.2287, -0.3566], [ 1.9663, -0.9906, 0.0879, -1.2485, -0.7832, -0.0876, 0.1427, 2.1529], [-0.3659, -0.1679, 1.8884, 1.0332, 0.1840, 0.9517, -1.4206, 0.3511], [ 0.9235, 1.1178, -2.0766, 0.6327, -0.8027, -0.3638, 1.5156, 1.4961]], requires_grad=True) Parametrized example# In deep learning literature, this layer is confusingly referred to as convolution while the actual operation is cross-correlation (the only difference is that filter is flipped for convolution, which is not the case for cross-correlation). Implementation of a layer with learnable weights, where cross-correlation has a filter (kernel) that represents weights. The backward pass computes the gradient wrt the input and the gradient wrt the filter. from numpy import flip import numpy as np from scipy.signal import convolve2d, correlate2d from torch.nn.modules.module import Module from torch.nn.parameter import Parameter class ScipyConv2dFunction(Function): @staticmethod def forward(ctx, input, filter, bias): # detach so we can cast to NumPy input, filter, bias = input.detach(), filter.detach(), bias.detach() result = correlate2d(input.numpy(), filter.numpy(), mode=\u0027valid\u0027) result += bias.numpy() ctx.save_for_backward(input, filter, bias) return torch.as_tensor(result, dtype=input.dtype) @staticmethod def backward(ctx, grad_output): grad_output = grad_output.detach() input, filter, bias = ctx.saved_tensors grad_output = grad_output.numpy() grad_bias = np.sum(grad_output, keepdims=True) grad_input = convolve2d(grad_output, filter.numpy(), mode=\u0027full\u0027) # the previous line can be expressed equivalently as: # grad_input = correlate2d(grad_output, flip(flip(filter.numpy(), axis=0), axis=1), mode=\u0027full\u0027) grad_filter = correlate2d(input.numpy(), grad_output, mode=\u0027valid\u0027) return torch.from_numpy(grad_input), torch.from_numpy(grad_filter).to(torch.float), torch.from_numpy(grad_bias).to(torch.float) class ScipyConv2d(Module): def __init__(self, filter_width, filter_height): super(ScipyConv2d, self).__init__() self.filter = Parameter(torch.randn(filter_width, filter_height)) self.bias = Parameter(torch.randn(1, 1)) def forward(self, input): return ScipyConv2dFunction.apply(input, self.filter, self.bias) Example usage: module = ScipyConv2d(3, 3) print(\"Filter and bias: \", list(module.parameters())) input = torch.randn(10, 10, requires_grad=True) output = module(input) print(\"Output from the convolution: \", output) output.backward(torch.randn(8, 8)) print(\"Gradient for the input map: \", input.grad) Filter and bias: [Parameter containing: tensor([[-0.1827, 0.4993, -0.1844], [ 0.2996, 0.1427, 1.7259], [-0.4290, -0.1642, 0.3413]], requires_grad=True), Parameter containing: tensor([[-1.4711]], requires_grad=True)] Output from the convolution: tensor([[-4.4601, 0.0272, -4.7531, -3.3066, -0.8798, -3.8595, -3.8842, -0.7476], [-1.3771, 1.9459, -1.6547, -1.8924, 0.1740, -4.3422, 0.9539, -4.0301], [-0.6228, -2.8745, -3.4537, -3.5422, -1.1866, -0.4177, -1.4226, -2.9234], [-4.2202, 0.3303, -3.7334, -0.8393, -2.1919, -2.1046, 0.3036, -4.5827], [-3.9174, -3.0093, -2.3159, -0.0155, -4.3488, -0.6254, -1.6805, -2.1052], [-2.2853, -4.0109, -2.0926, -2.9317, -4.3792, -2.1464, -4.2363, -2.9448], [-2.0740, -2.1193, -2.6911, 1.4574, -1.1215, -0.4816, 1.7072, -1.8141], [ 1.2033, -2.8568, -1.8822, -2.2315, -3.8975, -6.9767, 0.0362, -0.3519]], grad_fn=\u003cScipyConv2dFunctionBackward\u003e) Gradient for the input map: tensor([[-0.0549, 0.4355, -0.6409, -0.1572, -0.0858, 0.2388, 0.1794, -0.7489, 0.1886, 0.0419], [ 0.2121, -0.9544, 0.7913, -3.6587, -1.6641, -0.3476, -0.7689, -0.4395, -2.8353, -0.3846], [-0.3572, 0.8411, -0.3262, 1.7988, -1.9550, 0.4235, 1.8212, -2.3506, -1.2652, 0.0535], [ 0.0393, 0.7305, -0.0835, 1.5406, -0.6733, 1.0101, 1.7939, 0.2314, -2.4808, -1.8750], [ 0.4038, -0.5585, 3.0725, -1.6545, -2.0938, -5.2832, 0.6203, -0.0072, 1.4343, -0.8228], [-0.4643, 0.0746, 2.3304, 4.5617, 3.6136, 0.2768, 0.6449, 1.6010, 1.2845, 1.6973], [-0.3721, -0.7075, -4.0620, 1.3988, -1.8513, 0.4283, 0.6069, 0.7676, -1.6908, 3.0061], [ 0.0401, 0.5447, -0.0734, -2.8119, 0.0626, -1.3970, 2.3800, 2.0322, 1.4477, -0.7838], [ 0.7304, 1.5156, 5.1256, 2.9123, 2.4866, 0.8322, -0.4200, 2.3762, 0.5758, -1.6012], [-1.0706, -1.0636, 0.0231, -0.0878, 0.2913, -0.1862, -0.1887, 0.7078, 0.1410, -0.2614]]) Check the gradients: from torch.autograd.gradcheck import gradcheck moduleConv = ScipyConv2d(3, 3) input = [torch.randn(20, 20, dtype=torch.double, requires_grad=True)] test = gradcheck(moduleConv, input, eps=1e-6, atol=1e-4) print(\"Are the gradients correct: \", test) Are the gradients correct: True Total running time of the script: (0 minutes 0.601 seconds) Download Jupyter notebook: numpy_extensions_tutorial.ipynb Download Python source code: numpy_extensions_tutorial.py Download zipped: numpy_extensions_tutorial.zip",
+       "articleBody": "Note Go to the end to download the full example code. Creating Extensions Using NumPy and SciPy# Author: Adam Paszke Updated by: Adam Dziedzic In this tutorial, we shall go through two tasks: Create a neural network layer with no parameters. This calls into numpy as part of its implementation Create a neural network layer that has learnable weights This calls into SciPy as part of its implementation import torch from torch.autograd import Function Parameter-less example# This layer doesn\u2019t particularly do anything useful or mathematically correct. It is aptly named BadFFTFunction Layer Implementation from numpy.fft import rfft2, irfft2 class BadFFTFunction(Function): @staticmethod def forward(ctx, input): numpy_input = input.detach().numpy() result = abs(rfft2(numpy_input)) return input.new(result) @staticmethod def backward(ctx, grad_output): numpy_go = grad_output.numpy() result = irfft2(numpy_go) return grad_output.new(result) # since this layer does not have any parameters, we can # simply declare this as a function, rather than as an ``nn.Module`` class def incorrect_fft(input): return BadFFTFunction.apply(input) Example usage of the created layer: input = torch.randn(8, 8, requires_grad=True) result = incorrect_fft(input) print(result) result.backward(torch.randn(result.size())) print(input) tensor([[ 7.1262, 5.8068, 10.1196, 3.1994, 4.4171], [ 6.1408, 9.0309, 14.1317, 4.6806, 24.6198], [ 4.9550, 0.6775, 2.5726, 11.1803, 17.1432], [10.0571, 8.4734, 15.7181, 15.7210, 2.4323], [ 9.6191, 5.3263, 6.9789, 4.8247, 0.6235], [10.0571, 6.2653, 9.5569, 1.2185, 2.4323], [ 4.9550, 7.5294, 0.6823, 2.8336, 17.1432], [ 6.1408, 1.0714, 4.8062, 9.8884, 24.6198]], grad_fn=\u003cBadFFTFunctionBackward\u003e) tensor([[ 0.2981, -0.9180, 1.0887, 0.9429, -0.7364, 0.0206, 0.4117, 0.1531], [ 0.3790, 0.1262, -0.1842, -0.8687, 1.5035, -0.9648, 0.0732, 0.9664], [-1.3868, 0.9499, -0.3284, 1.0688, 0.4877, -1.5322, 1.4423, -1.2157], [-0.0087, 1.0468, -0.2953, 0.2596, -1.0999, 1.1581, -1.6687, 0.5902], [-0.3993, 2.7223, -2.3470, -0.7070, 0.4587, 1.7032, -2.2865, 2.0817], [ 0.0508, 0.5409, -0.3327, 0.4894, -1.6847, -1.2469, -1.4493, 0.1756], [ 2.9609, 0.3420, 0.5210, -0.9017, 2.4427, 0.9684, 0.6103, -0.5437], [ 1.6497, -1.6989, -0.4911, -0.2109, 0.8204, -0.4431, 0.8545, 0.7171]], requires_grad=True) Parametrized example# In deep learning literature, this layer is confusingly referred to as convolution while the actual operation is cross-correlation (the only difference is that filter is flipped for convolution, which is not the case for cross-correlation). Implementation of a layer with learnable weights, where cross-correlation has a filter (kernel) that represents weights. The backward pass computes the gradient wrt the input and the gradient wrt the filter. from numpy import flip import numpy as np from scipy.signal import convolve2d, correlate2d from torch.nn.modules.module import Module from torch.nn.parameter import Parameter class ScipyConv2dFunction(Function): @staticmethod def forward(ctx, input, filter, bias): # detach so we can cast to NumPy input, filter, bias = input.detach(), filter.detach(), bias.detach() result = correlate2d(input.numpy(), filter.numpy(), mode=\u0027valid\u0027) result += bias.numpy() ctx.save_for_backward(input, filter, bias) return torch.as_tensor(result, dtype=input.dtype) @staticmethod def backward(ctx, grad_output): grad_output = grad_output.detach() input, filter, bias = ctx.saved_tensors grad_output = grad_output.numpy() grad_bias = np.sum(grad_output, keepdims=True) grad_input = convolve2d(grad_output, filter.numpy(), mode=\u0027full\u0027) # the previous line can be expressed equivalently as: # grad_input = correlate2d(grad_output, flip(flip(filter.numpy(), axis=0), axis=1), mode=\u0027full\u0027) grad_filter = correlate2d(input.numpy(), grad_output, mode=\u0027valid\u0027) return torch.from_numpy(grad_input), torch.from_numpy(grad_filter).to(torch.float), torch.from_numpy(grad_bias).to(torch.float) class ScipyConv2d(Module): def __init__(self, filter_width, filter_height): super(ScipyConv2d, self).__init__() self.filter = Parameter(torch.randn(filter_width, filter_height)) self.bias = Parameter(torch.randn(1, 1)) def forward(self, input): return ScipyConv2dFunction.apply(input, self.filter, self.bias) Example usage: module = ScipyConv2d(3, 3) print(\"Filter and bias: \", list(module.parameters())) input = torch.randn(10, 10, requires_grad=True) output = module(input) print(\"Output from the convolution: \", output) output.backward(torch.randn(8, 8)) print(\"Gradient for the input map: \", input.grad) Filter and bias: [Parameter containing: tensor([[-0.9220, -1.9648, -1.1928], [-0.8511, -0.9363, -0.1717], [ 1.9871, 0.7806, 0.9926]], requires_grad=True), Parameter containing: tensor([[0.4478]], requires_grad=True)] Output from the convolution: tensor([[ 1.4524, 4.1022, -0.5481, 2.3474, -0.9490, 1.2432, 5.6856, 7.0171], [-2.6289, -4.2239, -3.0481, -5.4708, -0.4143, -3.2688, 0.9216, 3.0340], [ 0.4413, -3.0372, -7.4714, 5.2076, 6.9427, 4.6424, -0.7446, -1.6155], [ 7.8159, 7.6030, 2.3901, 0.0110, 1.6502, -1.1802, -2.2701, -1.7154], [ 0.0942, 6.7015, 0.0750, 0.8374, 5.1041, 3.9594, 7.3748, 3.3851], [-6.0563, -3.3505, 2.2362, 4.6187, 7.0127, 3.1547, -2.7627, 1.9812], [ 3.8745, 6.6219, 3.9081, 2.0309, -5.7916, -8.8383, -0.6795, 1.6734], [ 1.5021, 6.6834, -2.1561, -2.7850, -3.7271, -1.9502, -1.2649, -2.0963]], grad_fn=\u003cScipyConv2dFunctionBackward\u003e) Gradient for the input map: tensor([[ 0.6252, 0.2822, -1.2214, -0.0896, 2.7734, 1.8837, -0.6003, -1.2801, -0.8610, -0.5846], [ 0.7902, -0.1907, 0.5051, 4.3802, 3.4373, -0.6854, 0.3940, 1.3632, 0.1256, 0.2900], [-1.8069, -0.7578, -2.7960, -2.2698, -6.6382, -4.8239, -3.7556, -1.3462, -2.6985, -0.9737], [-2.0273, -2.6917, -6.7432, -6.3354, -6.2976, -7.6700, -1.4033, -3.5956, -2.3692, -0.8122], [-1.2698, -1.1976, 1.0421, 0.5485, 0.3568, 1.9781, 3.2939, 1.6334, 0.6680, 1.8875], [ 0.2595, -1.6246, 4.2133, 2.1766, 2.7330, 1.1745, 1.8901, -1.5758, -0.0438, 0.1057], [ 3.4173, 0.3101, 1.4136, -2.4073, -4.2957, -2.7172, 1.1397, -0.6129, 2.4722, 0.4081], [-0.1272, -1.1772, -1.6386, 0.6108, -3.4690, -1.6663, -3.0028, -4.0788, -2.8726, -0.1026], [ 0.4951, -0.0493, 2.5226, 4.6889, 3.6614, 3.4015, -0.7038, -4.0705, -1.5007, -0.8919], [ 0.3920, -0.1100, -0.5906, -1.1826, 0.6565, -1.4903, 5.7900, 2.1853, 3.1670, 0.3613]]) Check the gradients: from torch.autograd.gradcheck import gradcheck moduleConv = ScipyConv2d(3, 3) input = [torch.randn(20, 20, dtype=torch.double, requires_grad=True)] test = gradcheck(moduleConv, input, eps=1e-6, atol=1e-4) print(\"Are the gradients correct: \", test) Are the gradients correct: True Total running time of the script: (0 minutes 0.605 seconds) Download Jupyter notebook: numpy_extensions_tutorial.ipynb Download Python source code: numpy_extensions_tutorial.py Download zipped: numpy_extensions_tutorial.zip",
        "author": {
          "@type": "Organization",
          "name": "PyTorch Contributors",

@@ -253,7 +253,7 @@ Note
 
 ```
 a = torch.linspace(0., 2. * math.pi, steps=25, requires_grad=True)
-torch.sin_(a)
+a.sin_()
 ```
 
 ## Autograd Profiler
