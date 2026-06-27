@@ -11,6 +11,7 @@ REQUIRED_FILES = [
     "conf.py",
     "index.rst",
     "CONTRIBUTING.md",
+    "docs/RRG1225_FORK_OPERATIONS.md",
 ]
 
 
